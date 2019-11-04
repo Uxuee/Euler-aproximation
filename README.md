@@ -2,7 +2,7 @@
 
 https://en.wikipedia.org/wiki/Euler_method
 
-https://raw.githubusercontent.com/Uxuee/Euler-aproximation/blob/master/800px-Euler_method.svg.png
+(https://raw.githubusercontent.com/Uxuee/Euler-aproximation/blob/master/800px-Euler_method.svg.png)
 
 Se pueden resolver ED faciles usando la aproximación de Euler que es lo mismo que Taylor a primer orden. Por ejemplo si tienes una EDO de primer orden así:
 
