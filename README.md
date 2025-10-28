@@ -1,20 +1,48 @@
-# Euler-aproximation
+# Euler Method — Forward Euler Approximation for ODEs
 
 https://en.wikipedia.org/wiki/Euler_method
 
-(https://raw.githubusercontent.com/Uxuee/Euler-aproximation/blob/master/800px-Euler_method.svg.png)
+(https://raw.githubusercontent.com/Uxuee/Euler-aproximation/blob/master/800px-Euler_method.svg)
 
-Se pueden resolver ED faciles usando la aproximación de Euler que es lo mismo que Taylor a primer orden. Por ejemplo si tienes una EDO de primer orden así:
+A minimal, well-documented implementation of the **Forward Euler** method to numerically solve **first-order ordinary differential equations (ODEs)**:
+\[
+\frac{dy}{dt} = f(t, y), \quad y(t_0) = y_0
+\]
+Includes examples, error analysis, and guidance on **step-size** and **stability**.
 
+> If you’re learning numerical methods, this repo shows the full path: definition → code → plots → error vs. step size → caveats.
 
+---
 
-Tonces con Taylor tienes que
+## ✨ Features
+- **Forward Euler** integrator for \( y' = f(t,y) \)
+- Works with scalar ODEs and simple vector ODEs
+- **Examples**: exponential decay, harmonic oscillator (vector form)
+- **Plots** of numerical vs. analytical solutions (when available)
+- **Error analysis** (local/global truncation error) and **stability notes**
+- Clean API you can extend to **Heun**, **RK2/RK4**, or adaptive methods
 
-alt text
+---
 
-Donde el tn es tu tiempo enésimo que es t0 + n * (delta t), con la condición inicial de y en t=0 puedes obtener y para todos los demás tiempos usando el algoritmo. El delta debería ser chiquito para que la aproximación de Taylor tenga sentido.
+## 🧠 Method (in one minute)
 
-Así que primero programa el algoritmo y usalo para resolver
+Forward Euler updates the solution with a first-order Taylor step:
+\[
+y_{n+1} = y_n + h \, f(t_n, y_n), \qquad t_{n+1} = t_n + h
+\]
+- **Local truncation error:** \( \mathcal{O}(h^2) \)
+- **Global error:** \( \mathcal{O}(h) \)
+- **Stability caveat:** small \( h \) needed, especially for stiff problems or negative real eigenvalues.
 
-La ecuación de decaimiento
-alt text
+---
+
+## 📦 Installation
+
+This project is intentionally lightweight. If it’s pure Python:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -r requirements.txt  # if provided
+# Or just ensure numpy/matplotlib are installed:
+pip install numpy matplotlib
