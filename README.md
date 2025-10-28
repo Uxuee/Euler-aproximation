@@ -2,7 +2,7 @@
 
 https://en.wikipedia.org/wiki/Euler_method
 
-(https://raw.githubusercontent.com/Uxuee/Euler-aproximation/blob/master/800px-Euler_method.svg)
+![Euler Method Illustration](https://raw.githubusercontent.com/Uxuee/Euler-aproximation/master/800px-Euler_method.svg.png)
 
 A minimal, well-documented implementation of the **Forward Euler** method to numerically solve **first-order ordinary differential equations (ODEs)**:
 \[
